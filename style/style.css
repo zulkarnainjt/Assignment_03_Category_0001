@@ -1,3 +1,10 @@
-body{
-     /* font-family: "ADLaM Display", serif; */
+
+
+.clearfix{
+     overflow: auto;
+}
+
+.clearfix:after{
+     content: "";
+     clear: both;
 }
