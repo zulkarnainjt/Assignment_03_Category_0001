@@ -13,17 +13,17 @@
 
 <body>
      <header>
-          <nav class="bg-[#FFF9F4]">
+          <nav class="bg-[#FFF9F4] border-b-2 border-b-black lg:border-none">
                <div class="w-4/5 mx-auto pt-5 pb-5 flex justify-between items-center font-sans">
                     <div class="flex items-center space-x-3">
                          <div>
                               <img src="c1-assets/logo-header.png" alt="">
                          </div>
-                         <div>
+                         <div class="lg:block hidden">
                               <h2 class="font-semibold text-2xl">Browse <span class="text-[#FFDC26]">4</span> Pets</h2>
                          </div>
                     </div>
-                    <div class="pl-60 space-x-10 font-semibold text-xl">
+                    <div class="pl-60 space-x-10 font-semibold text-xl lg:block md:block hidden">
                          <a
                               class="hover:border p-1 hover:bg-gradient-to-r from-red-100 to-red-300 rounded-md hover:text-black">Find
                               a Pet</a>
@@ -33,13 +33,14 @@
                               class="hover:border p-1 hover:bg-gradient-to-r from-green-100 to-green-300 rounded-md hover:text-black">Contact
                               Us</a>
                     </div>
-                    <div class="space-x-5">
+                    <div class="space-x-5 lg:block md:block hidden">
                          <i class="fa-regular fa-bell text-2xl"></i>
                          <i class="fa-solid fa-magnifying-glass text-2xl"></i>
                          <button
                               class="border border-[#FFDC26] font-semibold text-xl px-6 py-1 rounded-md">Login</button>
                          <button class="bg-[#FFDC26] px-7 py-2 rounded-md font-semibold text-xl">Register</button>
                     </div>
+                    <i class="fa-solid fa-bars font-bold text-3xl lg:hidden"></i>
                </div>
           </nav>
           <section>
@@ -55,7 +56,8 @@
                          <button class="bg-[#FFDC26] px-7 py-2 rounded-md font-semibold text-xl">Find a pet</button>
                     </div>
                     <div>
-                         <img class="relative -mt-20 lg:-mt-96 w-full -z-10 animation" src="c1-assets/cat-big.png" alt="Billi">
+                         <img class="relative -mt-20 lg:-mt-96 w-full -z-10 animation" src="c1-assets/cat-big.png"
+                              alt="Billi">
                     </div>
                </div>
           </section>
@@ -64,7 +66,7 @@
           <section class="mt-40 mb-32">
                <div class="w-4/5 mx-auto">
                     <h1 class="font-bold text-4xl mb-20">Browse By Categories</h1>
-                    <div class="grid grid-cols-6 gap-5 text-center">
+                    <div class="grid lg:grid-cols-6 grid-cols-2 gap-5 text-center">
                          <div class="border bg-[#F9DF8A] p-14 rounded-xl flex items-center justify-center flex-col">
                               <div class="rounded-full bg-white">
                                    <img class="m-auto p-5" src="c1-assets/dog-cartoon.png" alt="">
@@ -115,8 +117,8 @@
                <div class="w-4/5 mx-auto pt-32 font-bold text-3xl">
                     <h1>Trending Pet Products</h1>
                </div>
-               <div class="w-4/5 mx-auto pt-10 pb-32 flex justify-between">
-                    <div class="bg-[#F9DF8A] rounded-lg pl-5">
+               <div class="w-4/5 mx-auto pt-10 pb-32 lg:flex lg:justify-between">
+                    <div class="bg-[#F9DF8A] rounded-lg pl-5 lg:mb-0 mb-10">
                          <div>
                               <h1 class="pt-14 text-3xl font-semibold">T-Shirt For Dogs</h1>
                               <p class="w-2/3 text-xl pt-5">Discover a world of trets, toys, and essentials handpicked
@@ -127,7 +129,7 @@
                               <img class="relative -mt-36 ml-56" src="c1-assets/cute-pet-small.png" alt="">
                          </div>
                     </div>
-                    <div class="grid lg:grid-cols-3 gap-5">
+                    <div class="grid lg:grid-cols-3 grid-cols-2 gap-5">
                          <div class="flex items-center bg-white gap-10 border pl-4 py-4 rounded-lg ">
                               <div class="bg-[#FFF9F4] rounded-md">
                                    <img class="p-4" src="c1-assets/fish-cartoon.png" alt="">
@@ -216,7 +218,7 @@
                                    <p class="font-semibold">$39.99</p>
                               </div>
                          </div>
-                         <div class="flex items-center bg-white gap-10 border pl-4 py-4 rounded-lg">
+                         <div class="lg:flex items-center bg-white gap-10 border pl-4 py-4 rounded-lg hidden">
                               <div class="bg-[#FFF9F4] rounded-md">
                                    <img class="p-4" src="c1-assets/pet-couch.png" alt="">
                               </div>
@@ -233,16 +235,18 @@
           <section>
                <div class="w-4/5 mx-auto mb-20">
                     <h2 class="font-bold text-3xl pb-10 pt-20 font-sans">Everyday low Price</h2>
-                    <div class="flex justify-between">
-                         <div class="flex items-center bg-gradient-to-r from-[#F8CCFB] to-[#ACD2FD] rounded-xl">
-                              <div class="pl-20">
-                                   <p class="font-semibold text-gray-800 pb-5">Under Price</p>
-                                   <h4 class="font-bold text-4xl pb-5">Pet Grooming Mitt</h4>
-                                   <h5 class="text-xl font-bold text-white pb-5">(Easy Hair Removal)</h5>
+                    <div class="flex justify-between lg:flex-row flex-col">
+                         <div
+                              class="flex flex-col lg:flex-row lg:items-center items-start bg-gradient-to-r from-[#F8CCFB] to-[#ACD2FD] rounded-xl mb-10">
+                              <div class="lg:pl-20 pl-10">
+                                   <p class="font-semibold text-gray-800 pb-5 lg:block hidden">Under Price</p>
+                                   <h4 class="font-bold text-3xl lg:text-4xl pt-16 pb-5">Pet Grooming Mitt</h4>
+                                   <h5 class="text-xl font-bold text-white pb-5 lg:block hidden">(Easy Hair Removal)
+                                   </h5>
                                    <p class="font-bold text-5xl">$7.99</p>
                               </div>
                               <div>
-                                   <img class="relative ml-20" src="c1-assets/cute-dog-mid.png" alt="">
+                                   <img class="relative lg:ml-20 ml-32 -mt-10" src="c1-assets/cute-dog-mid.png" alt="">
                               </div>
                          </div>
                          <div class="bg-gradient-to-r from-[#FFF9F4] to-[#F9DF8A] rounded-xl">
@@ -251,7 +255,8 @@
                                    <p class="font-bold text-5xl text-yellow-400">$7.99</p>
                               </div>
                               <div>
-                                   <img class="relative -mt-5 ml-56 pr-5" src="c1-assets/cute-pet-mid.png" alt="">
+                                   <img class="relative -mt-5 lg:ml-56 pr-5 ml-40" src="c1-assets/cute-pet-mid.png"
+                                        alt="">
                               </div>
                          </div>
                     </div>
@@ -261,7 +266,7 @@
                <h1 class="text-4xl font-bold text-center pb-20 pt-20 font-mono">Customer <span class="text-[#f7da7b]">
                          Review</span></h1>
                <div class="flex items-center">
-                    <div>
+                    <div class="lg:block hidden">
                          <i class="fa-solid fa-chevron-left text-4xl hover:text-gray-600"></i>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20 text-center w-4/5 mx-auto">
@@ -311,7 +316,7 @@
                               <p class="pt-5 font-semibold">Alaska</p>
                          </div>
                     </div>
-                    <div>
+                    <div class="lg:block hidden">
                          <i class="fa-solid fa-chevron-right text-4xl hover:text-gray-600"></i>
                     </div>
                </div>
@@ -325,11 +330,11 @@
           </section>
           <section class="mt-40">
                <div class="w-4/5 mx-auto mb-20">
-                    <div class="bg-[#FFF9F4] rounded-xl flex items-center gap-36 p-9">
-                         <div class="ml-32">
+                    <div class="bg-[#FFF9F4] rounded-xl flex flex-col lg:flex-row items-center gap-36 p-9">
+                         <div class="lg:ml-32">
                               <img src="c1-assets/cute-pet-mid.png" alt="">
                          </div>
-                         <div class="ml-20">
+                         <div class="lg:ml-20 text-center lg:text-left">
                               <h2 class="font-bold text-4xl pb-5">Get Pawsome News!</h2>
                               <p class="text-xl text-gray-800 pb-7">Exclusive training tips, ticks, product deals and
                                    more.</p>
@@ -345,9 +350,9 @@
      </main>
      <footer>
           <div class="bg-gradient-to-b from-[#FFDC26] to-[#998417] relative -mt-72 -z-10">
-               <div class="w-4/5 mx-auto flex justify-between pt-72 pb-20">
+               <div class="w-4/5 mx-auto flex lg:flex-row flex-col justify-between pt-72 pb-20">
                     <div class="">
-                         <div class="flex items-center gap-5">
+                         <div class="flex items-center gap-5 lg:pb-0 pb-5">
                               <div>
                                    <img src="c1-assets/logo-footer.png" alt="">
                               </div>
@@ -356,13 +361,13 @@
                                    </h2>
                               </div>
                          </div>
-                         <div>
+                         <div class="lg:pb-0 pb-10">
                               <p class="text-xl">Discover a world of treats, toys, and <br> essentials handpicked for
                                    your
                                    furry <br>friends</p>
                          </div>
                     </div>
-                    <div class="space-y-5 text-xl font-semibold ">
+                    <div class="space-y-5 text-xl font-semibold lg:pb-0 pb-10">
                          <p>Find a Pet</p>
                          <p>Breeds</p>
                          <p>Contact us</p>
