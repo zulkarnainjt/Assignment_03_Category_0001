@@ -1,0 +1,29 @@
+.animation{
+     animation: FromLeft 6s ease-in;
+}
+@keyframes FromLeft {
+     0%{
+          transform: translateX(-100%);
+     }
+     80%{
+          transform: translateX(20%);
+     }
+     100%{
+          transform: translateX(0%);
+     }
+}
+
+.animation_text{
+     animation: FromRight 6s ease-in;
+}
+@keyframes FromRight{
+     0%{
+          transform: translateX(100%);
+     }
+     80%{
+          transform:translateX(-20%)
+     }
+     100%{
+          transform: translateX(0%);
+     }
+}
